@@ -6,8 +6,6 @@ import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { OscarAI } from '@/data/oscar-ai';
 import { greetings } from '@/data/oscar-knowledge-base';
-// Remove the CSS import since we're using Tailwind now
-// import '@/oscar-animations.css'; 
 
 interface Message {
   id: string;

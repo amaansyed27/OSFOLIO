@@ -1,0 +1,12 @@
+/* TEAM */
+Developer: Amaan Syed
+Site: https://amaansyed27.tech
+Linkdln: https://www.linkedin.com/in/amaansyed27/
+GitHub: https://github.com/amaansyed27
+Location: Pune, Maharashtra
+
+/* SITE */
+Last update: 2025-05-15
+Standards: HTML5, CSS3, JavaScript, React
+Components: React, TypeScript, Vite, Framer Motion, 
+Software: VS Code, GitHub, vercel, Vite

@@ -1,0 +1,29 @@
+# robots.txt for amaansyed27.tech
+User-agent: *
+Allow: /
+Disallow: /404
+
+# Allow all crawlers
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Slurp
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: Baiduspider
+Allow: /
+User-agent: Yandex
+Allow: /
+
+# Crawler specific settings
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /images/
+
+# Sitemap
+Sitemap: https://amaansyed27.tech/sitemap.xml
+
+# Host information
+Host: amaansyed27.tech

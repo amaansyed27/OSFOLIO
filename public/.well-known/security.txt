@@ -1,0 +1,5 @@
+# Security Policy
+Contact: mailto:your-email@example.com
+Expires: 2026-01-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://amaansyed27.tech/.well-known/security.txt

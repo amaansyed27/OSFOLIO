@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    { 
+      "source": "/", 
+      "destination": "https://amaansyed27.tech", 
+      "permanent": true 
+    },
+    {
+      "source": "https://amaansyed27.vercel.app/:path*",
+      "destination": "https://amaansyed27.tech/:path*",
+      "permanent": true
+    },
+    {
+      "source": "https://osfolio.vercel.app/:path*",
+      "destination": "https://amaansyed27.tech/:path*",
+      "permanent": true
+    },
+    {
+      "source": "https://www.amaansyed27.tech/:path*",
+      "destination": "https://amaansyed27.tech/:path*",
+      "permanent": true
+    }
+  ]
+}

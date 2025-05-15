@@ -1,0 +1,62 @@
+# Netlify configuration for optional deployment
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  baseUrl = "https://amaansyed27.tech"
+  exclude = [
+    "**/*.js",
+    "**/*.css",
+    "**/*.ico",
+    "**/*.png",
+    "**/*.svg",
+    "/404"
+  ]
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://*.vercel-analytics.com;"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirect rules to ensure canonical URLs
+[[redirects]]
+  from = "https://amaansyed27.netlify.app/*"
+  to = "https://amaansyed27.tech/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.amaansyed27.tech/*"
+  to = "https://amaansyed27.tech/:splat"
+  status = 301
+  force = true
+
+# Handle 404 errors
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

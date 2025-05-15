@@ -6,6 +6,7 @@ import Window from '@/components/OperatingSystem/Window';
 import DesktopIcon from '@/components/OperatingSystem/DesktopIcon';
 import MobileAppView from '@/components/OperatingSystem/MobileAppView';
 import AnimatedBackground from '@/components/OperatingSystem/AnimatedBackground';
+import SEO from '@/components/SEO/SEO';
 import { ChevronRight, Grip } from 'lucide-react';
 
 // Import App Components
@@ -48,6 +49,9 @@ const Index = () => {
   const isMobile = useIsMobile();
   const [activeMobileView, setActiveMobileView] = useState<'apps' | 'info'>('apps');
   const [activeMobileApp, setActiveMobileApp] = useState<string | null>(null);
+  
+  // SEO optimization
+  const keywords = 'amaan, amaan syed, syed amaan, amaansyed27, portfolio, software engineer, developer, react, frontend, web development, interactive portfolio';
   
   // New state for managing desktop layout
   const [desktopLayout, setDesktopLayout] = useState({
@@ -426,6 +430,11 @@ const Index = () => {
   // Desktop view - full OS experience
   return (
     <div className="h-screen w-screen bg-os-desktopBg text-white overflow-hidden">
+      <SEO 
+        title="Amaan Syed | Software Engineer & Developer Portfolio"
+        description="Amaan Syed - Interactive OS-themed portfolio showcasing software engineering skills, projects, and professional experience"
+        keywords={keywords}
+      />
       <AnimatePresence>
         {isBooting && <BootScreen onBootComplete={handleBootComplete} />}
       </AnimatePresence>

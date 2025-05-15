@@ -1,0 +1,80 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    { 
+      "source": "/", 
+      "has": [
+        {
+          "type": "host",
+          "value": "amaansyed27.vercel.app"
+        }
+      ],
+      "destination": "https://amaansyed27.tech", 
+      "permanent": true 
+    },
+    { 
+      "source": "/", 
+      "has": [
+        {
+          "type": "host",
+          "value": "osfolio.vercel.app"
+        }
+      ],
+      "destination": "https://amaansyed27.tech", 
+      "permanent": true 
+    },
+    { 
+      "source": "/:path*", 
+      "has": [
+        {
+          "type": "host",
+          "value": "www.amaansyed27.tech"
+        }
+      ],
+      "destination": "https://amaansyed27.tech/:path*", 
+      "permanent": true 
+    }
+  ]
+}
