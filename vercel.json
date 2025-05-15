@@ -41,18 +41,17 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    { 
-      "source": "/", 
+  ],  "redirects": [
+    {
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "amaansyed27.vercel.app"
         }
       ],
-      "destination": "https://amaansyed27.tech", 
-      "permanent": true 
+      "destination": "https://amaansyed27.tech/:path*",
+      "permanent": false
     },
     { 
       "source": "/", 

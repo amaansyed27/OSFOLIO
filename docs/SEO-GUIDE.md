@@ -90,7 +90,14 @@ Primary keywords this site is optimized for:
 - amaan syed
 - syed amaan
 - amaansyed27
-- software engineer amaan syed
+- mobile app developer amaan syed
+- kotlin developer amaan syed
+- flutter developer amaan syed
+- jetpack compose developer
+- kotlin multiplatform developer
 - amaan syed developer
 - amaan syed portfolio
 - amaan syed tech
+- os inspired portfolio
+- android developer pune
+- cross-platform developer amaan

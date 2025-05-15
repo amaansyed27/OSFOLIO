@@ -1,12 +1,14 @@
 /* TEAM */
 Developer: Amaan Syed
+Title: Software & Mobile App Developer
 Site: https://amaansyed27.tech
-Linkdln: https://www.linkedin.com/in/amaansyed27/
+LinkedIn: https://www.linkedin.com/in/amaansyed27/
 GitHub: https://github.com/amaansyed27
 Location: Pune, Maharashtra
 
 /* SITE */
 Last update: 2025-05-15
-Standards: HTML5, CSS3, JavaScript, React
-Components: React, TypeScript, Vite, Framer Motion, 
-Software: VS Code, GitHub, vercel, Vite
+Standards: HTML5, CSS3, JavaScript, React, Kotlin, Flutter
+Components: React, TypeScript, Vite, Framer Motion, Jetpack Compose, Kotlin Multiplatform
+Software: VS Code, Android Studio, GitHub, Vercel, Vite, Figma
+Specialty: OS-inspired portfolio UI, mobile app development, cross-platform applications

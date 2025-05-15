@@ -39,12 +39,21 @@ export const generatePersonSchema = (data: PersonSchema): string => {
     '@context': 'https://schema.org',
     '@type': 'Person',
     'name': data.name,
-    'headline': data.headline,
-    'description': data.description,
-    'jobTitle': data.jobTitle,
+    'headline': data.headline || 'Software & Mobile App Developer specializing in Kotlin, Flutter, and React',
+    'description': data.description || 'Developer with expertise in cross-platform mobile apps and web development',
+    'jobTitle': data.jobTitle || 'Software & Mobile App Developer',
     'url': data.url,
     'sameAs': data.sameAs || [],
-    'knowsAbout': data.skills || [],
+    'knowsAbout': data.skills || [
+      'React', 
+      'TypeScript', 
+      'Kotlin', 
+      'Jetpack Compose', 
+      'Flutter', 
+      'Kotlin Multiplatform', 
+      'Mobile App Development', 
+      'Cross-Platform Development'
+    ],
     'alumniOf': data.alumniOf?.map(edu => ({
       '@type': 'EducationalOrganization',
       'name': edu.name,
@@ -85,13 +94,29 @@ export const generateWebsiteSchema = (): string => {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     'url': 'https://amaansyed27.tech/',
-    'name': 'Amaan Syed | Software Engineer Portfolio',
-    'description': 'Interactive OS-themed portfolio showcasing Amaan Syed\'s work and skills',
+    'name': 'Amaan Syed | Software & Mobile App Developer Portfolio',
+    'description': 'Interactive OS-themed portfolio showcasing Amaan Syed\'s mobile and web development skills',
     'inLanguage': 'en-US',
     'author': {
       '@type': 'Person',
-      'name': 'Amaan Syed'
-    }
+      'name': 'Amaan Syed',
+      'jobTitle': 'Software & Mobile App Developer'
+    },
+    'keywords': [
+      'mobile app development', 
+      'kotlin', 
+      'jetpack compose', 
+      'flutter', 
+      'kotlin multiplatform', 
+      'kmp', 
+      'cross-platform', 
+      'os inspired portfolio', 
+      'android development', 
+      'amaan syed',
+      'amaansyed27'
+    ],
+    'additionalType': 'CreativeWork',
+    'alternateName': ['OS-Inspired Portfolio', 'OSFOLIO', 'Amaan Syed Dev Portfolio']
   };
   
   return JSON.stringify(schema);

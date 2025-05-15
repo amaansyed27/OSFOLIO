@@ -1,11 +1,12 @@
 {
-  "name": "Amaan Syed Portfolio",
+  "name": "Amaan Syed - Software & Mobile Developer Portfolio",
   "short_name": "AmaanSyed",
-  "description": "Amaan Syed - Interactive OS-themed portfolio showcasing software engineering skills",
+  "description": "Amaan Syed - Interactive OS-themed portfolio showcasing Kotlin, Flutter, and React development skills",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
+  "categories": ["portfolio", "developer", "mobile", "android", "kotlin", "flutter", "os-theme"],
   "icons": [
     {
       "src": "/assets/pwa-icon-192.png",

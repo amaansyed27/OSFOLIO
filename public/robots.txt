@@ -1,10 +1,12 @@
-# robots.txt for amaansyed27.tech
+# robots.txt for amaansyed27.tech and amaansyed27.vercel.app
 User-agent: *
 Allow: /
 Disallow: /404
 
 # Allow all crawlers
 User-agent: Googlebot
+Allow: /
+User-agent: Googlebot-Mobile
 Allow: /
 User-agent: Bingbot
 Allow: /
@@ -15,6 +17,10 @@ Allow: /
 User-agent: Baiduspider
 Allow: /
 User-agent: Yandex
+Allow: /
+User-agent: facebot
+Allow: /
+User-agent: Applebot
 Allow: /
 
 # Crawler specific settings

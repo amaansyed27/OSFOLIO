@@ -12,14 +12,14 @@ interface SEOProps {
 }
 
 export const SEO = ({
-  title = 'Amaan Syed | Software Engineer & Developer Portfolio',
-  description = 'Amaan Syed - Interactive OS-themed portfolio showcasing software engineering skills, projects, and professional experience',
-  keywords = 'amaan, amaan syed, syed amaan, amaansyed27, portfolio, software engineer, developer, react, typescript, javascript, frontend, web development',
+  title = 'Amaan Syed | Software & Mobile App Developer | OS-Inspired UI',
+  description = 'Amaan Syed - Interactive OS-themed portfolio showcasing mobile app development with Kotlin, Flutter, and web projects using React and TypeScript',
+  keywords = 'amaan, amaan syed, syed amaan, amaansyed27, portfolio, mobile app developer, kotlin, jetpack compose, flutter, kmp, kotlin multiplatform, react, typescript, os inspired portfolio, android development, cross-platform development',
   ogImage = 'https://amaansyed27.tech/assets/preview.png',
   ogUrl = 'https://amaansyed27.tech/',
   structuredData,
   type = 'website'
-}: SEOProps) => {  useEffect(() => {
+}: SEOProps) => {useEffect(() => {
     document.title = title;
     
     // Update meta tags
