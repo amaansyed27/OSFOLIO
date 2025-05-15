@@ -60,7 +60,7 @@ const BootScreen: React.FC<BootScreenProps> = ({ onBootComplete }) => {
           transition={{ duration: 0.5 }}
         >
           <h1 className="text-4xl font-bold tracking-wider mb-2">AMAAN SYED</h1>
-          <p className="text-xl text-os-accent">Tech Geek — Native Android Developer</p>
+          <p className="text-xl text-blue-800">Tech Geek — Native Android Developer</p>
         </motion.div>
       )}
       
