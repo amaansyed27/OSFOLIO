@@ -8,7 +8,7 @@ const AnimatedBackground: React.FC = () => {
   useEffect(() => {
     // Load the user's profile image
     const img = new Image();
-    img.src = '/lovable-uploads/f3fe388e-8395-4e81-b6a8-41447ff0d7f2.png';
+    img.src = '/assets/notion-face.png';
     img.onload = () => {
       setUserImage(img);
     };
