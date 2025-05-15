@@ -186,16 +186,16 @@ const AboutApp: React.FC = () => {
                   <div className="space-y-2">
                     <div className="flex justify-between items-center pb-2 border-b border-[#333333]">
                       <span className="text-[#cccccc]">Email:</span>
-                      <a href="mailto:amaan@example.com" className="text-[#0078d4] hover:underline flex items-center">
-                        amaan@example.com 
+                      <a href="mailto:amaansyed27@gmail.com" className="text-[#0078d4] hover:underline flex items-center">
+                        amaansyed27@gmail.com 
                         <ExternalLink className="h-3 w-3 ml-1" />
                       </a>
                     </div>
                     
                     <div className="flex justify-between items-center pb-2 border-b border-[#333333]">
                       <span className="text-[#cccccc]">GitHub:</span>
-                      <a href="https://github.com/Amaan27" target="_blank" rel="noopener noreferrer" className="text-[#0078d4] hover:underline flex items-center">
-                        github.com/Amaan27
+                      <a href="https://github.com/amaansyed27" target="_blank" rel="noopener noreferrer" className="text-[#0078d4] hover:underline flex items-center">
+                        github.com/amaansyed27
                         <ExternalLink className="h-3 w-3 ml-1" />
                       </a>
                     </div>
@@ -203,7 +203,7 @@ const AboutApp: React.FC = () => {
                     <div className="flex justify-between items-center pb-2 border-b border-[#333333]">
                       <span className="text-[#cccccc]">LinkedIn:</span>
                       <a href="#" className="text-[#0078d4] hover:underline flex items-center">
-                        linkedin.com/in/amaan-syed
+                        linkedin.com/in/amaansyed27
                         <ExternalLink className="h-3 w-3 ml-1" />
                       </a>
                     </div>
