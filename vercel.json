@@ -38,10 +38,85 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/javascript; charset=utf-8"
+        },
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/"
+        }
+      ]
+    },
+    {
+      "source": "/assets/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
         }
       ]
     }
-  ],  "redirects": [
+  ],
+  "routes": [
+    { 
+      "src": "/robots.txt", 
+      "dest": "/robots.txt" 
+    },
+    { 
+      "src": "/sitemap.xml", 
+      "dest": "/sitemap.xml" 
+    },
+    { 
+      "src": "/sw.js", 
+      "dest": "/sw.js" 
+    }
+  ],
+  "redirects": [
     {
       "source": "/:path*",
       "has": [
@@ -51,29 +126,32 @@
         }
       ],
       "destination": "https://amaansyed27.tech/:path*",
-      "permanent": false
+      "permanent": true,
+      "statusCode": 301
     },
-    { 
-      "source": "/", 
+    {
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "osfolio.vercel.app"
         }
       ],
-      "destination": "https://amaansyed27.tech", 
-      "permanent": true 
+      "destination": "https://amaansyed27.tech/:path*",
+      "permanent": true,
+      "statusCode": 301
     },
-    { 
-      "source": "/:path*", 
+    {
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "www.amaansyed27.tech"
         }
       ],
-      "destination": "https://amaansyed27.tech/:path*", 
-      "permanent": true 
+      "destination": "https://amaansyed27.tech/:path*",
+      "permanent": true,
+      "statusCode": 301
     }
   ]
 }
