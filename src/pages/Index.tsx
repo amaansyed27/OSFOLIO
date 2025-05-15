@@ -5,7 +5,6 @@ import Taskbar from '@/components/OperatingSystem/Taskbar';
 import Window from '@/components/OperatingSystem/Window';
 import DesktopIcon from '@/components/OperatingSystem/DesktopIcon';
 import MobileAppView from '@/components/OperatingSystem/MobileAppView';
-import AnimatedBackground from '@/components/OperatingSystem/AnimatedBackground';
 import SEO from '@/components/SEO/SEO';
 import { ChevronRight, Grip } from 'lucide-react';
 
@@ -441,8 +440,17 @@ const Index = () => {
 
       {!isBooting && (
         <>
-          {/* Animated background with ASCII art and text */}
-          <AnimatedBackground />
+          {/* Static background */}
+          <div className="fixed inset-0 z-0 bg-gradient-to-b from-os-desktopBg to-[#1e293b] flex flex-col items-center justify-center">
+            <div className="text-center p-6">
+              <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-os-accent">
+                <img src="/assets/notion-face.png" alt="Amaan Syed" className="w-full h-full object-cover" />
+              </div>
+              <h1 className="text-3xl font-bold text-os-accent mb-2">Amaan Syed | Tech Geek</h1>
+              <p className="text-white/70 mb-4 text-lg">"Racing through code, one pixel at a time"</p>
+              <p className="text-white/50 text-sm">Use apps and Oscar to learn more about me, or chat with others online</p>
+            </div>
+          </div>
           
           {/* Desktop icons - Dynamic grid layout with reduced horizontal padding */}
           <div className="fixed left-2 top-2 flex gap-x-4 z-10">
