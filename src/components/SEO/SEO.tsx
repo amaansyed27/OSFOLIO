@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { generatePersonSchema, generateWebsiteSchema } from '@/lib/schema';
 
 interface SEOProps {
@@ -19,82 +20,53 @@ export const SEO = ({
   ogUrl = 'https://amaansyed27.tech/',
   structuredData,
   type = 'website'
-}: SEOProps) => {useEffect(() => {
-    document.title = title;
-    
-    // Update meta tags
-    const metaTags = {
-      description,
-      keywords,
-      'og:title': title,
-      'og:description': description,
-      'og:image': ogImage,
-      'og:url': ogUrl,
-      'og:type': type === 'profile' ? 'profile' : 'website',
-      'twitter:card': 'summary_large_image',
-      'twitter:title': title,
-      'twitter:description': description,
-      'twitter:image': ogImage,
-      'twitter:url': ogUrl
-    };
-    
-    Object.entries(metaTags).forEach(([name, content]) => {
-      // Check if meta tag exists
-      let metaTag = document.querySelector(`meta[name="${name}"]`) || 
-                    document.querySelector(`meta[property="${name}"]`);
+}: SEOProps) => {
+  // Generate schema based on type
+  const jsonLdData = structuredData || (
+    type === 'profile' ? 
+      generatePersonSchema({
+        name: 'Amaan Syed',
+        jobTitle: 'Software Engineer',
+        url: 'https://amaansyed27.tech/',
+        skills: ['React', 'TypeScript', 'JavaScript', 'Web Development', 'Frontend Development'],
+        sameAs: [
+          'https://github.com/amaansyed27',
+          'https://www.linkedin.com/in/amaansyed27/'
+        ],
+        image: ogImage
+      }) : 
+      generateWebsiteSchema()
+  );
+  
+  // Map type to OG type
+  const ogType = type === 'profile' ? 'profile' : 'website';
+  
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       
-      // If exists, update it
-      if (metaTag) {
-        if (metaTag.hasAttribute('name')) {
-          metaTag.setAttribute('content', content);
-        } else if (metaTag.hasAttribute('property')) {
-          metaTag.setAttribute('content', content);
-        }
-      } 
-      // If doesn't exist and is needed, create it
-      else {
-        metaTag = document.createElement('meta');
-        if (name.startsWith('og:') || name.startsWith('twitter:')) {
-          metaTag.setAttribute('property', name);
-        } else {
-          metaTag.setAttribute('name', name);
-        }
-        metaTag.setAttribute('content', content);
-        document.head.appendChild(metaTag);
-      }
-    });
-    
-    // Add structured data
-    let structuredDataScript = document.querySelector('script[data-type="application/ld+json"]');
-    const jsonLdData = structuredData || (
-      type === 'profile' ? 
-        generatePersonSchema({
-          name: 'Amaan Syed',
-          jobTitle: 'Software Engineer',
-          url: 'https://amaansyed27.tech/',
-          skills: ['React', 'TypeScript', 'JavaScript', 'Web Development', 'Frontend Development'],
-          sameAs: [
-            'https://github.com/amaansyed27',
-            'https://www.linkedin.com/in/amaansyed27/'
-          ],
-          image: ogImage
-        }) : 
-        generateWebsiteSchema()
-    );
-    
-    if (structuredDataScript) {
-      structuredDataScript.textContent = jsonLdData;
-    } else {
-      structuredDataScript = document.createElement('script');
-      structuredDataScript.setAttribute('type', 'application/ld+json');
-      structuredDataScript.setAttribute('data-type', 'application/ld+json');
-      structuredDataScript.textContent = jsonLdData;
-      document.head.appendChild(structuredDataScript);
-    }
-    
-  }, [title, description, keywords, ogImage, ogUrl, structuredData, type]);
-
-  return null;
+      {/* Open Graph / Facebook */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:url" content={ogUrl} />
+      <meta property="og:type" content={ogType} />
+      
+      {/* Twitter Card */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={ogImage} />
+      <meta property="twitter:url" content={ogUrl} />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {jsonLdData}
+      </script>
+    </Helmet>
+  );
 };
 
 export default SEO;

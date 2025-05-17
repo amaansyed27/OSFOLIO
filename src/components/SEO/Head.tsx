@@ -34,11 +34,13 @@ const Head = ({
       <link rel="canonical" href={canonical} />
       
       {/* Open Graph / Facebook */}
+      <meta property="og:locale" content="en_US" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonical} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      <meta property="og:site_name" content="Amaan Syed Portfolio" />
       
       {/* Twitter Card */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -46,6 +48,11 @@ const Head = ({
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
+      <meta name="twitter:creator" content="@amaansyed27" />
+      
+      {/* Additional SEO tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="googlebot" content="index, follow" />
       
       {/* Additional head elements */}
       {children}

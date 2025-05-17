@@ -49,5 +49,3 @@ export const BreadcrumbJsonLd = ({ items }: { items: { name: string, item: strin
     </Helmet>
   );
 };
-
-export default { JsonLd, BreadcrumbJsonLd };
