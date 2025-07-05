@@ -3,12 +3,16 @@
 // It will run only when the site is loaded on the Vercel domain
 
 (function() {
-  // Check if we're on the Vercel domain
-  if (typeof window !== 'undefined' && 
-      window.location.hostname.includes('vercel.app')) {
+  // Check if we're on the Vercel domain or if there are SSL issues with custom domain
+  const isVercelDomain = typeof window !== 'undefined' && 
+    (window.location.hostname.includes('vercel.app') || 
+     window.location.protocol === 'http:' ||
+     window.location.hostname === 'localhost');
+  
+  if (isVercelDomain) {
     
     // Log the visit
-    console.log('Visitor on Vercel domain');
+    console.log('Visitor on Vercel domain or fallback due to SSL issues');
     
     // 1. Enhance meta tags for Vercel domain
     const enhanceMetaTags = () => {

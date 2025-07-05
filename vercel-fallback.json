@@ -41,40 +41,6 @@
         }
       ]
     }
-  ],  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "amaansyed27.vercel.app"
-        }
-      ],
-      "destination": "https://amaansyed27.tech/:path*",
-      "permanent": false
-    },
-    { 
-      "source": "/", 
-      "has": [
-        {
-          "type": "host",
-          "value": "osfolio.vercel.app"
-        }
-      ],
-      "destination": "https://amaansyed27.tech", 
-      "permanent": true 
-    },
-    { 
-      "source": "/:path*", 
-      "has": [
-        {
-          "type": "host",
-          "value": "www.amaansyed27.tech"
-        }
-      ],
-      "destination": "https://amaansyed27.tech/:path*", 
-      "permanent": true 
-    }
   ],
   "functions": {
     "src/main.tsx": {

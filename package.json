@@ -11,6 +11,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "bash scripts/deploy.sh",
+    "deploy:ssl-check": "bash scripts/deploy-with-ssl-check.sh",
     "analyze": "vite build --mode analyze"
   },
   "dependencies": {
