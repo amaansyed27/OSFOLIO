@@ -75,10 +75,5 @@
       "destination": "https://amaansyed27.tech/:path*", 
       "permanent": true 
     }
-  ],
-  "functions": {
-    "src/main.tsx": {
-      "maxDuration": 30
-    }
-  }
+  ]
 }

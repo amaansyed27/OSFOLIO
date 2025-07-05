@@ -41,10 +41,5 @@
         }
       ]
     }
-  ],
-  "functions": {
-    "src/main.tsx": {
-      "maxDuration": 30
-    }
-  }
+  ]
 }
