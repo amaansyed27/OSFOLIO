@@ -2,8 +2,6 @@
 
 OSFOLIO is an interactive operating system-themed portfolio website built with React, TypeScript, and Tailwind CSS. It simulates a desktop environment with apps representing different sections of a personal portfolio, complete with windows, taskbar, and desktop icons.
 
-![OSFOLIO](https://via.placeholder.com/800x400?text=OSFOLIO+Screenshot)
-
 ## Features
 
 - 🖥️ Complete OS-style interface with desktop icons, taskbar, and window management
